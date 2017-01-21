@@ -11,7 +11,7 @@ export default router => {
       ctx.checkBody('first_name').notEmpty()
       ctx.checkBody('last_name').notEmpty()
       ctx.checkBody('email').notEmpty()
-      ctx.checkBody('about_me').notEmpty()
+      ctx.checkBody('description').notEmpty()
 
       if (ctx.errors) {
         ctx.response.badRequest(ctx.errors, 400)
@@ -26,7 +26,7 @@ export default router => {
       ctx.checkBody('first_name').notEmpty()
       ctx.checkBody('last_name').notEmpty()
       ctx.checkBody('email').notEmpty()
-      ctx.checkBody('about_me').notEmpty()
+      ctx.checkBody('description').notEmpty()
 
       if (ctx.errors) {
         ctx.response.badRequest(ctx.errors, 400)

@@ -1,5 +1,5 @@
 
-let _list = [{id: 1, first_name: 'John', last_name: 'Smith', email: 'test@gmail.com', about_me: 'about me'}]
+let _list = [{id: 1, first_name: 'John', last_name: 'Smith', email: 'test@gmail.com', description: 'about me'}]
 
 export default class ContactService {
     
@@ -34,6 +34,6 @@ export default class ContactService {
         item.first_name = data.first_name
         item.last_name = data.last_name
         item.email = data.email
-        item.about_me = data.about_me
+        item.description = data.description
     }
 }
