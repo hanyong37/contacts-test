@@ -30,7 +30,7 @@ export default class ContactService {
     }
 
     update(id, data) {
-        let item = get(id)
+        let item = this.get(id)
         item.first_name = data.first_name
         item.last_name = data.last_name
         item.email = data.email

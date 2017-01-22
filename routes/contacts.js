@@ -42,4 +42,7 @@ export default router => {
 
       ctx.response.ok('Contact is deleted')
     })
+    .get('/contacts/:id', (ctx, next) => {
+      ctx.response.ok(_service.get(parseInt(ctx.params.id)))
+    })
 }
