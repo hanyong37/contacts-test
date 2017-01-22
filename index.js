@@ -10,6 +10,7 @@ import contactsRoute from './routes/contacts'
 import logger from './logger'
 import koaLogger from 'koa-logger'
 import koaValidate from 'koa-validate'
+import cors from 'koa-cors'
 
 const app = new Koa()
 
@@ -22,6 +23,11 @@ contactsRoute(router)
 
 app
   .use(body())
+  .use(cors({
+    origin: () => '*',
+    methods: 'GET,POST,PUT,PATCH,DELETE',
+    maxAge: 86400
+  }))
   .use(errorHandler)
   .use(extensions)
   .use(koaLogger())
