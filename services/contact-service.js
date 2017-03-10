@@ -24,7 +24,7 @@ export default class ContactService {
     }
 
     add(data) {
-        data.id = Math.max(..._list.map(it => it.id)) + 1 || 1
+        data.id = Math.max(0, ..._list.map(it => it.id)) + 1
         _list.push(data)
         return data.id
     }
